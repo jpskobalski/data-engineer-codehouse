@@ -1,8 +1,13 @@
-API_URL = "http://api.openweathermap.org/data/2.5/weather"
-API_KEY = "2954b118ada0935c62bf5fc06d622426"
+from dotenv import load_dotenv
+import os
 
-REDSHIFT_USER = "juan_skobalski_coderhouse"
-REDSHIFT_PASSWORD = ""
-REDSHIFT_HOST = "data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com"
-REDSHIFT_PORT = "5439"
-REDSHIFT_DATABASE = "data-engineer-database"
+load_dotenv()
+
+API_URL = "http://api.openweathermap.org/data/2.5/weather"
+API_KEY = os.getenv("API_KEY")
+
+REDSHIFT_USER = os.getenv("REDSHIFT_USER")
+REDSHIFT_PASSWORD = os.getenv("REDSHIFT_PASSWORD")
+REDSHIFT_HOST = os.getenv("REDSHIFT_HOST")
+REDSHIFT_PORT = os.getenv("REDSHIFT_PORT")
+REDSHIFT_DATABASE = os.getenv("REDSHIFT_DATABASE")
