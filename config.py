@@ -4,7 +4,7 @@ import os
 load_dotenv()
 
 API_URL = "http://api.openweathermap.org/data/2.5/weather"
-API_KEY = os.getenv("API_KEY")
+API_KEY = "2954b118ada0935c62bf5fc06d622426"
 
 REDSHIFT_USER = os.getenv("REDSHIFT_USER")
 REDSHIFT_PASSWORD = os.getenv("REDSHIFT_PASSWORD")
