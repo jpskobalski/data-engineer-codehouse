@@ -1,7 +1,6 @@
 import psycopg2
 from config import REDSHIFT_USER, REDSHIFT_PASSWORD, REDSHIFT_HOST, REDSHIFT_PORT, REDSHIFT_DATABASE
 
-
 def load_data(df):
     conn = psycopg2.connect(
         dbname=REDSHIFT_DATABASE,
@@ -19,22 +18,29 @@ def load_data(df):
         presion INT,
         viento FLOAT,
         descripcion VARCHAR(100),
-        fecha TIMESTAMP
+        fecha TIMESTAMP,
+        PRIMARY KEY (ciudad, fecha)
     );
     """
     cursor.execute(create_table_query)
     conn.commit()
 
+    # Insertar datos, reemplazando registros con la misma clave primaria
     for index, row in df.iterrows():
-        cursor.execute(
-            "INSERT INTO clima (ciudad, temperatura, humedad, presion, viento, descripcion, fecha) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-            (row['ciudad'], row['temperatura'], row['humedad'], row['presion'], row['viento'], row['descripcion'],
-             row['fecha'])
-        )
+        cursor.execute("""
+            INSERT INTO clima (ciudad, temperatura, humedad, presion, viento, descripcion, fecha)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT (ciudad, fecha)
+            DO UPDATE SET 
+                temperatura = EXCLUDED.temperatura,
+                humedad = EXCLUDED.humedad,
+                presion = EXCLUDED.presion,
+                viento = EXCLUDED.viento,
+                descripcion = EXCLUDED.descripcion;
+        """, (row['ciudad'], row['temperatura'], row['humedad'], row['presion'], row['viento'], row['descripcion'], row['fecha']))
     conn.commit()
     cursor.close()
     conn.close()
-
 
 if __name__ == "__main__":
     from transform import transform_data
