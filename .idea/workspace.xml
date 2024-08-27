@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e845643f-e470-499c-8920-415da733c7aa" name="Changes" comment="volviendo a sumar el API por lo discutido en clase">
+    <list default="true" id="e845643f-e470-499c-8920-415da733c7aa" name="Changes" comment="modificando transform.py para agregar validacion de ids y valores nulos&#10;modificando load para afrontar los cambios realizados en transform.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +124,8 @@
       <workItem from="1722855107952" duration="1352000" />
       <workItem from="1722902964002" duration="98000" />
       <workItem from="1722943345400" duration="4060000" />
+      <workItem from="1723580160191" duration="1045000" />
+      <workItem from="1723636142855" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="volviando a sumar el API por lo discutido en clase">
       <option name="closed" value="true" />
@@ -133,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722903037400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modificando transform.py para agregar validacion de ids y valores nulos&#10;modificando load para afrontar los cambios realizados en transform.py">
+      <option name="closed" value="true" />
+      <created>1723580403073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723580403073</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,10 +151,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="volviando a sumar el API por lo discutido en clase" />
-    <option name="LAST_COMMIT_MESSAGE" value="volviando a sumar el API por lo discutido en clase" />
+    <MESSAGE value="modificando transform.py para agregar validacion de ids y valores nulos&#10;modificando load para afrontar los cambios realizados en transform.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificando transform.py para agregar validacion de ids y valores nulos&#10;modificando load para afrontar los cambios realizados en transform.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/data_engineer_skobalski$main.coverage" NAME="main Coverage Results" MODIFIED="1722807560647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/data_engineer_skobalski$extract.coverage" NAME="extract Coverage Results" MODIFIED="1722808188180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/data_engineer_skobalski$extract.coverage" NAME="extract Coverage Results" MODIFIED="1723580562230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
